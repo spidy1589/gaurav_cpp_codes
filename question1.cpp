@@ -4,15 +4,12 @@ using namespace std;
 bool isPalindrome(int number) {
     int original = number;
     int reversed = 0;
-    
-    // Reverse the number
     while (number > 0) {
         int digit = number % 10;
         reversed = reversed * 10 + digit;
         number /= 10;
     }
     
-    // Check if the original number is equal to its reverse
     return original == reversed;
 }
 
